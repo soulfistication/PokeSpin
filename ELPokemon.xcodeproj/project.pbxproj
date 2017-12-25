@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52098C281FF0EADE00009461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C271FF0EADE00009461 /* AppDelegate.m */; };
+		52098C2E1FF0EADE00009461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52098C2C1FF0EADE00009461 /* Main.storyboard */; };
+		52098C301FF0EADE00009461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52098C2F1FF0EADE00009461 /* Assets.xcassets */; };
+		52098C331FF0EADE00009461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52098C311FF0EADE00009461 /* LaunchScreen.storyboard */; };
+		52098C361FF0EADE00009461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C351FF0EADE00009461 /* main.m */; };
+		52098C4C1FF0EB2B00009461 /* ELMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C3F1FF0EB2B00009461 /* ELMainViewController.m */; };
+		52098C4D1FF0EB2B00009461 /* ELEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C461FF0EB2B00009461 /* ELEnvironment.m */; };
+		52098C4E1FF0EB2B00009461 /* ELNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C491FF0EB2B00009461 /* ELNetworkClient.m */; };
+		52098C531FF0EB4700009461 /* Futura-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52098C511FF0EB4700009461 /* Futura-Light.ttf */; };
+		52098C541FF0EB4700009461 /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 52098C521FF0EB4700009461 /* Futura.ttc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52098C231FF0EADE00009461 /* ELPokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELPokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52098C261FF0EADE00009461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52098C271FF0EADE00009461 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52098C2D1FF0EADE00009461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52098C2F1FF0EADE00009461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52098C321FF0EADE00009461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52098C341FF0EADE00009461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52098C351FF0EADE00009461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52098C3E1FF0EB2B00009461 /* ELMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELMainViewController.h; sourceTree = "<group>"; };
+		52098C3F1FF0EB2B00009461 /* ELMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELMainViewController.m; sourceTree = "<group>"; };
+		52098C441FF0EB2B00009461 /* ELConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELConstans.h; sourceTree = "<group>"; };
+		52098C451FF0EB2B00009461 /* ELEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELEnvironment.h; sourceTree = "<group>"; };
+		52098C461FF0EB2B00009461 /* ELEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELEnvironment.m; sourceTree = "<group>"; };
+		52098C481FF0EB2B00009461 /* ELNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNetworkClient.h; sourceTree = "<group>"; };
+		52098C491FF0EB2B00009461 /* ELNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNetworkClient.m; sourceTree = "<group>"; };
+		52098C511FF0EB4700009461 /* Futura-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Light.ttf"; sourceTree = "<group>"; };
+		52098C521FF0EB4700009461 /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52098C201FF0EADE00009461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52098C1A1FF0EADE00009461 = {
+			isa = PBXGroup;
+			children = (
+				52098C251FF0EADE00009461 /* ELPokemon */,
+				52098C241FF0EADE00009461 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52098C241FF0EADE00009461 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52098C231FF0EADE00009461 /* ELPokemon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52098C251FF0EADE00009461 /* ELPokemon */ = {
+			isa = PBXGroup;
+			children = (
+				52098C4F1FF0EB4700009461 /* Resources */,
+				52098C3C1FF0EB2B00009461 /* Classes */,
+				52098C261FF0EADE00009461 /* AppDelegate.h */,
+				52098C271FF0EADE00009461 /* AppDelegate.m */,
+				52098C2C1FF0EADE00009461 /* Main.storyboard */,
+				52098C2F1FF0EADE00009461 /* Assets.xcassets */,
+				52098C311FF0EADE00009461 /* LaunchScreen.storyboard */,
+				52098C341FF0EADE00009461 /* Info.plist */,
+				52098C351FF0EADE00009461 /* main.m */,
+			);
+			path = ELPokemon;
+			sourceTree = "<group>";
+		};
+		52098C3C1FF0EB2B00009461 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52098C3D1FF0EB2B00009461 /* Controller */,
+				52098C401FF0EB2B00009461 /* Extensions */,
+				52098C411FF0EB2B00009461 /* Model */,
+				52098C4A1FF0EB2B00009461 /* Protocols */,
+				52098C4B1FF0EB2B00009461 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		52098C3D1FF0EB2B00009461 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52098C3E1FF0EB2B00009461 /* ELMainViewController.h */,
+				52098C3F1FF0EB2B00009461 /* ELMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52098C401FF0EB2B00009461 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52098C411FF0EB2B00009461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52098C421FF0EB2B00009461 /* Database */,
+				52098C431FF0EB2B00009461 /* Environment */,
+				52098C471FF0EB2B00009461 /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52098C421FF0EB2B00009461 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		52098C431FF0EB2B00009461 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				52098C441FF0EB2B00009461 /* ELConstans.h */,
+				52098C451FF0EB2B00009461 /* ELEnvironment.h */,
+				52098C461FF0EB2B00009461 /* ELEnvironment.m */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		52098C471FF0EB2B00009461 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52098C481FF0EB2B00009461 /* ELNetworkClient.h */,
+				52098C491FF0EB2B00009461 /* ELNetworkClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		52098C4A1FF0EB2B00009461 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52098C4B1FF0EB2B00009461 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52098C4F1FF0EB4700009461 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52098C501FF0EB4700009461 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52098C501FF0EB4700009461 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52098C511FF0EB4700009461 /* Futura-Light.ttf */,
+				52098C521FF0EB4700009461 /* Futura.ttc */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52098C221FF0EADE00009461 /* ELPokemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52098C391FF0EADE00009461 /* Build configuration list for PBXNativeTarget "ELPokemon" */;
+			buildPhases = (
+				52098C1F1FF0EADE00009461 /* Sources */,
+				52098C201FF0EADE00009461 /* Frameworks */,
+				52098C211FF0EADE00009461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ELPokemon;
+			productName = ELPokemon;
+			productReference = 52098C231FF0EADE00009461 /* ELPokemon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52098C1B1FF0EADE00009461 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Ivan;
+				TargetAttributes = {
+					52098C221FF0EADE00009461 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52098C1E1FF0EADE00009461 /* Build configuration list for PBXProject "ELPokemon" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52098C1A1FF0EADE00009461;
+			productRefGroup = 52098C241FF0EADE00009461 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52098C221FF0EADE00009461 /* ELPokemon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52098C211FF0EADE00009461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52098C531FF0EB4700009461 /* Futura-Light.ttf in Resources */,
+				52098C331FF0EADE00009461 /* LaunchScreen.storyboard in Resources */,
+				52098C301FF0EADE00009461 /* Assets.xcassets in Resources */,
+				52098C2E1FF0EADE00009461 /* Main.storyboard in Resources */,
+				52098C541FF0EB4700009461 /* Futura.ttc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52098C1F1FF0EADE00009461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52098C4D1FF0EB2B00009461 /* ELEnvironment.m in Sources */,
+				52098C361FF0EADE00009461 /* main.m in Sources */,
+				52098C4C1FF0EB2B00009461 /* ELMainViewController.m in Sources */,
+				52098C4E1FF0EB2B00009461 /* ELNetworkClient.m in Sources */,
+				52098C281FF0EADE00009461 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52098C2C1FF0EADE00009461 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52098C2D1FF0EADE00009461 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52098C311FF0EADE00009461 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52098C321FF0EADE00009461 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52098C371FF0EADE00009461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		52098C381FF0EADE00009461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52098C3A1FF0EADE00009461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ELPokemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivan.ELPokemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52098C3B1FF0EADE00009461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ELPokemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ivan.ELPokemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52098C1E1FF0EADE00009461 /* Build configuration list for PBXProject "ELPokemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52098C371FF0EADE00009461 /* Debug */,
+				52098C381FF0EADE00009461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52098C391FF0EADE00009461 /* Build configuration list for PBXNativeTarget "ELPokemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52098C3A1FF0EADE00009461 /* Debug */,
+				52098C3B1FF0EADE00009461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52098C1B1FF0EADE00009461 /* Project object */;
+}
