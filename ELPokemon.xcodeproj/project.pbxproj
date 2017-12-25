@@ -17,9 +17,11 @@
 		52098C4E1FF0EB2B00009461 /* ELNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C491FF0EB2B00009461 /* ELNetworkClient.m */; };
 		52098C531FF0EB4700009461 /* Futura-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52098C511FF0EB4700009461 /* Futura-Light.ttf */; };
 		52098C541FF0EB4700009461 /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 52098C521FF0EB4700009461 /* Futura.ttc */; };
+		916E2975458AA1C1B5C9C24B /* libPods-ELPokemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DDB8D719E964AA324C07F5 /* libPods-ELPokemon.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45DDB8D719E964AA324C07F5 /* libPods-ELPokemon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ELPokemon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52098C231FF0EADE00009461 /* ELPokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELPokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52098C261FF0EADE00009461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52098C271FF0EADE00009461 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		52098C491FF0EB2B00009461 /* ELNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNetworkClient.m; sourceTree = "<group>"; };
 		52098C511FF0EB4700009461 /* Futura-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Light.ttf"; sourceTree = "<group>"; };
 		52098C521FF0EB4700009461 /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
+		6FD7151AD979F6963EAD289D /* Pods-ELPokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.debug.xcconfig"; sourceTree = "<group>"; };
+		7FF875C9158F8E97274BE995 /* Pods-ELPokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916E2975458AA1C1B5C9C24B /* libPods-ELPokemon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		314ED4C5C2221EFC974C4608 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45DDB8D719E964AA324C07F5 /* libPods-ELPokemon.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52098C1A1FF0EADE00009461 = {
 			isa = PBXGroup;
 			children = (
 				52098C251FF0EADE00009461 /* ELPokemon */,
 				52098C241FF0EADE00009461 /* Products */,
+				DA7ACF632D14A5C82A958CB2 /* Pods */,
+				314ED4C5C2221EFC974C4608 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +192,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		DA7ACF632D14A5C82A958CB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FD7151AD979F6963EAD289D /* Pods-ELPokemon.debug.xcconfig */,
+				7FF875C9158F8E97274BE995 /* Pods-ELPokemon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52098C391FF0EADE00009461 /* Build configuration list for PBXNativeTarget "ELPokemon" */;
 			buildPhases = (
+				C1645B22A781D0B07A6E66E7 /* [CP] Check Pods Manifest.lock */,
 				52098C1F1FF0EADE00009461 /* Sources */,
 				52098C201FF0EADE00009461 /* Frameworks */,
 				52098C211FF0EADE00009461 /* Resources */,
+				12DFEE94DF66DEBAB57CFF2D /* [CP] Embed Pods Frameworks */,
+				017B1AA98D004444EE6EA170 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +271,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		017B1AA98D004444EE6EA170 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12DFEE94DF66DEBAB57CFF2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1645B22A781D0B07A6E66E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ELPokemon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52098C1F1FF0EADE00009461 /* Sources */ = {
@@ -386,6 +464,7 @@
 		};
 		52098C3A1FF0EADE00009461 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD7151AD979F6963EAD289D /* Pods-ELPokemon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +478,7 @@
 		};
 		52098C3B1FF0EADE00009461 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF875C9158F8E97274BE995 /* Pods-ELPokemon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

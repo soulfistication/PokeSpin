@@ -6,9 +6,9 @@
 //  Copyright © 2017 Ivan. All rights reserved.
 //
 
-//#import <Overcoat/Overcoat.h>
-//
-//@interface ELNetworkClient : OVCHTTPSessionManager
-//
-//@end
+#import <Overcoat/Overcoat.h>
+
+@interface ELNetworkClient : OVCHTTPSessionManager
+
+@end
 
