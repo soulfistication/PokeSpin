@@ -64,6 +64,7 @@
 		52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELSuccessViewController.m; sourceTree = "<group>"; };
 		52098C6F1FF25B1900009461 /* ELFailedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELFailedViewController.h; sourceTree = "<group>"; };
 		52098C701FF25B1900009461 /* ELFailedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELFailedViewController.m; sourceTree = "<group>"; };
+		52098C721FF2875200009461 /* ELScreenDismissable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELScreenDismissable.h; sourceTree = "<group>"; };
 		6FD7151AD979F6963EAD289D /* Pods-ELPokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.debug.xcconfig"; sourceTree = "<group>"; };
 		7FF875C9158F8E97274BE995 /* Pods-ELPokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +204,7 @@
 		52098C4A1FF0EB2B00009461 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				52098C721FF2875200009461 /* ELScreenDismissable.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -329,9 +331,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

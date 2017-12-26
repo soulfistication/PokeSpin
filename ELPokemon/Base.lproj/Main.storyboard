@@ -143,12 +143,21 @@
                                     <action selector="spinSlotMachine:" destination="pCI-Ns-uk5" eventType="touchUpInside" id="dwu-4g-api"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4n-P9-ILa" userLabel="Close Button">
+                                <rect key="frame" x="10" y="30" width="23" height="25"/>
+                                <state key="normal" image="CloseButtonBlack"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="pCI-Ns-uk5" eventType="touchUpInside" id="OTC-q8-cMU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="u4n-P9-ILa" firstAttribute="leading" secondItem="Owk-Zk-zUo" secondAttribute="leading" constant="10" id="05b-q8-CMH"/>
                             <constraint firstItem="YHe-Hx-vpI" firstAttribute="centerY" secondItem="Owk-Zk-zUo" secondAttribute="centerY" id="A7U-Hr-1Wg"/>
                             <constraint firstItem="YHe-Hx-vpI" firstAttribute="leading" secondItem="Owk-Zk-zUo" secondAttribute="leading" id="AXB-1B-Ihk"/>
                             <constraint firstItem="gdI-Wq-2jn" firstAttribute="centerX" secondItem="Owk-Zk-zUo" secondAttribute="centerX" id="M2g-Rz-Ewx"/>
+                            <constraint firstItem="u4n-P9-ILa" firstAttribute="top" secondItem="Owk-Zk-zUo" secondAttribute="top" constant="10" id="PMR-BA-GAx"/>
                             <constraint firstItem="Owk-Zk-zUo" firstAttribute="bottom" secondItem="gdI-Wq-2jn" secondAttribute="bottom" constant="40" id="gGx-pB-Ucv"/>
                             <constraint firstItem="YHe-Hx-vpI" firstAttribute="centerX" secondItem="Owk-Zk-zUo" secondAttribute="centerX" id="ifw-3U-H4u"/>
                             <constraint firstItem="Owk-Zk-zUo" firstAttribute="trailing" secondItem="YHe-Hx-vpI" secondAttribute="trailing" id="y99-Fh-7i2"/>
@@ -157,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="slotMachinePickerView" destination="YHe-Hx-vpI" id="sy9-yi-WDb"/>
+                        <outlet property="spinSlotButton" destination="gdI-Wq-2jn" id="5kN-Ob-9xd"/>
                         <segue destination="O2r-fT-UlL" kind="presentation" identifier="ELSegueIdentifierOpenSuccessSlotMachine" id="7qu-Yo-Xrb"/>
                         <segue destination="HL2-YT-ty1" kind="presentation" identifier="ELSegueIdentifierOpenSuccessSlotMachine" id="EHh-gS-d9d"/>
                     </connections>
@@ -172,7 +182,20 @@
                     <view key="view" contentMode="scaleToFill" id="CuO-1t-PfI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgV-pN-mPk" userLabel="Close Button">
+                                <rect key="frame" x="10" y="30" width="23" height="25"/>
+                                <state key="normal" image="CloseButtonBlack"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="HL2-YT-ty1" eventType="touchUpInside" id="ubK-9Y-9EW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LgV-pN-mPk" firstAttribute="leading" secondItem="2cU-ec-aNf" secondAttribute="leading" constant="10" id="E1t-X9-2lG"/>
+                            <constraint firstItem="LgV-pN-mPk" firstAttribute="top" secondItem="2cU-ec-aNf" secondAttribute="top" constant="10" id="ZPv-f2-neS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2cU-ec-aNf"/>
                     </view>
                 </viewController>
@@ -187,7 +210,20 @@
                     <view key="view" contentMode="scaleToFill" id="cde-J8-mcw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-bt-qYW" userLabel="Close Button">
+                                <rect key="frame" x="10" y="30" width="23" height="25"/>
+                                <state key="normal" image="CloseButtonBlack"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="O2r-fT-UlL" eventType="touchUpInside" id="qrC-Fg-AXU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aei-bt-qYW" firstAttribute="top" secondItem="m3o-M8-O1L" secondAttribute="top" constant="10" id="4ry-ZQ-5xo"/>
+                            <constraint firstItem="Aei-bt-qYW" firstAttribute="leading" secondItem="m3o-M8-O1L" secondAttribute="leading" constant="10" id="SWe-Cj-tmr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m3o-M8-O1L"/>
                     </view>
                 </viewController>
@@ -214,4 +250,7 @@
             <point key="canvasLocation" x="-326" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CloseButtonBlack" width="23" height="25"/>
+    </resources>
 </document>

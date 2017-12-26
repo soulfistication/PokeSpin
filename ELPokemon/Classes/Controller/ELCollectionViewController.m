@@ -45,12 +45,12 @@
 	
 	return cell;
 }
-#pragma mark - UICollectionView Delegate
+
+#pragma mark - UICollectionvView Delegate Flow Layout
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 	NSLog(@"%ld", indexPath.row);
 }
 
-#pragma mark - UICollectionvView Delegate Flow Layout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 	CGFloat width = self.collectionView.frame.size.width;
 	return CGSizeMake(width * 0.3, 100.0);

@@ -7,6 +7,7 @@
 //
 
 #import <Realm/Realm.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "ELSuccessViewController.h"
 #import "ELNetworkClient.h"
 #import "ELEnvironment.h"
@@ -24,7 +25,10 @@
 	
 	self.client = [[ELNetworkClient alloc] initWithBaseURL:[NSURL URLWithString:[ELEnvironment isDevelopmentEnvironment] ? ELNetworkClientBaseURL : ELNetworkClientBaseURLDevelopment]];
 	
+
+	[SVProgressHUD show];
 	[self.client GET:@"/api/v2/pokemon/2" parameters:nil completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+		[SVProgressHUD dismiss];
 		ELPokemon *pokemon = response.result;
 		ELPokemonRealm *pokemonRealm = [[ELPokemonRealm alloc] initWithModel:pokemon];
 		
@@ -38,4 +42,12 @@
 	}];
 }
 
+#pragma mark - IBAction
+- (IBAction)closeButtonTapped:(id)sender {
+	[self dismissViewControllerAnimated:YES completion:^{
+		if ([self.delegate respondsToSelector:@selector(screedDidDismissed)]) {
+			[self.delegate screedDidDismissed];
+		}
+	}];
+}
 @end

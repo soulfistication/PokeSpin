@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ELScreenDismissable.h"
 
 @interface ELFailedViewController : UIViewController
-
+@property (nonatomic, strong) NSString *failedSequence;
+@property (nonatomic, weak) id<ELScreenDismissable> delegate;
 @end

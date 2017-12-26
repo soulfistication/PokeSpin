@@ -17,4 +17,13 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 }
+
+#pragma mark - IBAction
+- (IBAction)closeButtonTapped:(id)sender {
+	[self dismissViewControllerAnimated:YES completion:^{
+		if ([self.delegate respondsToSelector:@selector(screedDidDismissed)]) {
+			[self.delegate screedDidDismissed];
+		}
+	}];
+}
 @end

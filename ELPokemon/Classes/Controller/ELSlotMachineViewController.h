@@ -7,7 +7,8 @@
 //
 
 #import "ELViewController.h"
+#import "ELScreenDismissable.h"
 
-@interface ELSlotMachineViewController : ELViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ELSlotMachineViewController : ELViewController<UIPickerViewDataSource, UIPickerViewDelegate, ELScreenDismissable>
 
 @end
