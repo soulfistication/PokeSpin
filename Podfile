@@ -6,4 +6,5 @@ target 'ELPokemon' do
   pod 'Masonry', '~> 1.0'
   pod 'Overcoat', '~> 4.0.0-beta.2'
   pod 'Realm', '~> 2.10'
+  pod 'SVProgressHUD', '~> 2.1'
 end

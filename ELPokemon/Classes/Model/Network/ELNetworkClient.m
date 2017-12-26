@@ -7,21 +7,16 @@
 //
 
 #import "ELNetworkClient.h"
+#import "ELPokemon.h"
 
 @interface ELNetworkClient ()
 
 @end
 
 @implementation ELNetworkClient
-#pragma mark - Init
-- (instancetype)initWithBaseURL:(NSURL *)url {
-	self = [super init];
-
-	if (self) {
-
-	}
-
-	return self;
++ (NSDictionary<NSString *,id> *)modelClassesByResourcePath {
+	return @{
+			 @"/api/v2/pokemon/#": [ELPokemon class]
+			};
 }
 @end
-

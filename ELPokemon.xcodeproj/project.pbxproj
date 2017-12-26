@@ -17,6 +17,13 @@
 		52098C4E1FF0EB2B00009461 /* ELNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C491FF0EB2B00009461 /* ELNetworkClient.m */; };
 		52098C531FF0EB4700009461 /* Futura-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52098C511FF0EB4700009461 /* Futura-Light.ttf */; };
 		52098C541FF0EB4700009461 /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 52098C521FF0EB4700009461 /* Futura.ttc */; };
+		52098C581FF0F98200009461 /* ELPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C571FF0F98200009461 /* ELPokemon.m */; };
+		52098C5C1FF1126800009461 /* ELPokemonRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C5B1FF1126800009461 /* ELPokemonRealm.m */; };
+		52098C621FF15DBC00009461 /* ELViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C611FF15DBC00009461 /* ELViewController.m */; };
+		52098C651FF1601100009461 /* ELCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C641FF1601100009461 /* ELCollectionViewController.m */; };
+		52098C681FF16C1300009461 /* ELSlotMachineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C671FF16C1300009461 /* ELSlotMachineViewController.m */; };
+		52098C6B1FF16EFE00009461 /* ELCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C6A1FF16EFE00009461 /* ELCollectionViewCell.m */; };
+		52098C6E1FF25B0B00009461 /* ELSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */; };
 		916E2975458AA1C1B5C9C24B /* libPods-ELPokemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DDB8D719E964AA324C07F5 /* libPods-ELPokemon.a */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +39,29 @@
 		52098C351FF0EADE00009461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52098C3E1FF0EB2B00009461 /* ELMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELMainViewController.h; sourceTree = "<group>"; };
 		52098C3F1FF0EB2B00009461 /* ELMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELMainViewController.m; sourceTree = "<group>"; };
-		52098C441FF0EB2B00009461 /* ELConstans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELConstans.h; sourceTree = "<group>"; };
+		52098C441FF0EB2B00009461 /* ELConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELConstants.h; sourceTree = "<group>"; };
 		52098C451FF0EB2B00009461 /* ELEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELEnvironment.h; sourceTree = "<group>"; };
 		52098C461FF0EB2B00009461 /* ELEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELEnvironment.m; sourceTree = "<group>"; };
 		52098C481FF0EB2B00009461 /* ELNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNetworkClient.h; sourceTree = "<group>"; };
 		52098C491FF0EB2B00009461 /* ELNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNetworkClient.m; sourceTree = "<group>"; };
 		52098C511FF0EB4700009461 /* Futura-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Light.ttf"; sourceTree = "<group>"; };
 		52098C521FF0EB4700009461 /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
+		52098C561FF0F98200009461 /* ELPokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELPokemon.h; sourceTree = "<group>"; };
+		52098C571FF0F98200009461 /* ELPokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELPokemon.m; sourceTree = "<group>"; };
+		52098C591FF103F900009461 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		52098C5A1FF1126800009461 /* ELPokemonRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELPokemonRealm.h; sourceTree = "<group>"; };
+		52098C5B1FF1126800009461 /* ELPokemonRealm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELPokemonRealm.m; sourceTree = "<group>"; };
+		52098C601FF15DBC00009461 /* ELViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELViewController.h; sourceTree = "<group>"; };
+		52098C611FF15DBC00009461 /* ELViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELViewController.m; sourceTree = "<group>"; };
+		52098C631FF1601100009461 /* ELCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELCollectionViewController.h; sourceTree = "<group>"; };
+		52098C641FF1601100009461 /* ELCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELCollectionViewController.m; sourceTree = "<group>"; };
+		52098C661FF16C1300009461 /* ELSlotMachineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELSlotMachineViewController.h; sourceTree = "<group>"; };
+		52098C671FF16C1300009461 /* ELSlotMachineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELSlotMachineViewController.m; sourceTree = "<group>"; };
+		52098C691FF16EFE00009461 /* ELCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELCollectionViewCell.h; sourceTree = "<group>"; };
+		52098C6A1FF16EFE00009461 /* ELCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELCollectionViewCell.m; sourceTree = "<group>"; };
+		52098C6C1FF25B0B00009461 /* ELSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELSuccessViewController.h; sourceTree = "<group>"; };
+		52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELSuccessViewController.m; sourceTree = "<group>"; };
+		52098C721FF2875200009461 /* ELScreenDismissable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELScreenDismissable.h; sourceTree = "<group>"; };
 		6FD7151AD979F6963EAD289D /* Pods-ELPokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.debug.xcconfig"; sourceTree = "<group>"; };
 		7FF875C9158F8E97274BE995 /* Pods-ELPokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +135,16 @@
 		52098C3D1FF0EB2B00009461 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52098C601FF15DBC00009461 /* ELViewController.h */,
+				52098C611FF15DBC00009461 /* ELViewController.m */,
 				52098C3E1FF0EB2B00009461 /* ELMainViewController.h */,
 				52098C3F1FF0EB2B00009461 /* ELMainViewController.m */,
+				52098C631FF1601100009461 /* ELCollectionViewController.h */,
+				52098C641FF1601100009461 /* ELCollectionViewController.m */,
+				52098C661FF16C1300009461 /* ELSlotMachineViewController.h */,
+				52098C671FF16C1300009461 /* ELSlotMachineViewController.m */,
+				52098C6C1FF25B0B00009461 /* ELSuccessViewController.h */,
+				52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +159,7 @@
 		52098C411FF0EB2B00009461 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52098C551FF0F93800009461 /* Mantle */,
 				52098C421FF0EB2B00009461 /* Database */,
 				52098C431FF0EB2B00009461 /* Environment */,
 				52098C471FF0EB2B00009461 /* Network */,
@@ -138,6 +170,8 @@
 		52098C421FF0EB2B00009461 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				52098C5A1FF1126800009461 /* ELPokemonRealm.h */,
+				52098C5B1FF1126800009461 /* ELPokemonRealm.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -145,9 +179,10 @@
 		52098C431FF0EB2B00009461 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
-				52098C441FF0EB2B00009461 /* ELConstans.h */,
+				52098C441FF0EB2B00009461 /* ELConstants.h */,
 				52098C451FF0EB2B00009461 /* ELEnvironment.h */,
 				52098C461FF0EB2B00009461 /* ELEnvironment.m */,
+				52098C591FF103F900009461 /* PrefixHeader.pch */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -164,6 +199,7 @@
 		52098C4A1FF0EB2B00009461 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				52098C721FF2875200009461 /* ELScreenDismissable.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -171,6 +207,8 @@
 		52098C4B1FF0EB2B00009461 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52098C691FF16EFE00009461 /* ELCollectionViewCell.h */,
+				52098C6A1FF16EFE00009461 /* ELCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +228,15 @@
 				52098C521FF0EB4700009461 /* Futura.ttc */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52098C551FF0F93800009461 /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				52098C561FF0F98200009461 /* ELPokemon.h */,
+				52098C571FF0F98200009461 /* ELPokemon.m */,
+			);
+			path = Mantle;
 			sourceTree = "<group>";
 		};
 		DA7ACF632D14A5C82A958CB2 /* Pods */ = {
@@ -279,9 +326,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -328,9 +378,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52098C621FF15DBC00009461 /* ELViewController.m in Sources */,
+				52098C6E1FF25B0B00009461 /* ELSuccessViewController.m in Sources */,
+				52098C5C1FF1126800009461 /* ELPokemonRealm.m in Sources */,
 				52098C4D1FF0EB2B00009461 /* ELEnvironment.m in Sources */,
 				52098C361FF0EADE00009461 /* main.m in Sources */,
+				52098C6B1FF16EFE00009461 /* ELCollectionViewCell.m in Sources */,
+				52098C581FF0F98200009461 /* ELPokemon.m in Sources */,
 				52098C4C1FF0EB2B00009461 /* ELMainViewController.m in Sources */,
+				52098C651FF1601100009461 /* ELCollectionViewController.m in Sources */,
+				52098C681FF16C1300009461 /* ELSlotMachineViewController.m in Sources */,
 				52098C4E1FF0EB2B00009461 /* ELNetworkClient.m in Sources */,
 				52098C281FF0EADE00009461 /* AppDelegate.m in Sources */,
 			);
@@ -468,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = ELPokemon/Classes/Model/Environment/PrefixHeader.pch;
 				INFOPLIST_FILE = ELPokemon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ivan.ELPokemon;
@@ -482,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = ELPokemon/Classes/Model/Environment/PrefixHeader.pch;
 				INFOPLIST_FILE = ELPokemon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ivan.ELPokemon;
