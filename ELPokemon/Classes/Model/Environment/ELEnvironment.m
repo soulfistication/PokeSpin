@@ -9,5 +9,11 @@
 #import "ELEnvironment.h"
 
 @implementation ELEnvironment
-
+#pragma mark - Development
++ (BOOL)isDevelopmentEnvironment {
+	if (DEBUG) {
+		return YES;
+	}
+	return NO;
+}
 @end

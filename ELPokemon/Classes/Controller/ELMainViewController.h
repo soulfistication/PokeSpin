@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ELViewController.h"
 
-@interface ELMainViewController : UIViewController
+@interface ELMainViewController : ELViewController
 
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ELEnvironment : NSObject
-
++ (BOOL)isDevelopmentEnvironment;
 @end
