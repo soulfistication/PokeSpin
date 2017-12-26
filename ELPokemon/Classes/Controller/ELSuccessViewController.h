@@ -11,5 +11,6 @@
 
 @interface ELSuccessViewController : UIViewController
 @property (nonatomic, assign) NSInteger pokemonIdentifier;
+@property (nonatomic, assign) BOOL unlocked;
 @property (nonatomic, weak) id<ELScreenDismissable> delegate;
 @end

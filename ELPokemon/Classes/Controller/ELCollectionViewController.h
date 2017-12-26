@@ -7,7 +7,8 @@
 //
 
 #import "ELViewController.h"
+#import "ELScreenDismissable.h"
 
-@interface ELCollectionViewController : ELViewController<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ELCollectionViewController : ELViewController<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ELScreenDismissable>
 
 @end

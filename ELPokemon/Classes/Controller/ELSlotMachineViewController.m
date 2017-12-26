@@ -31,14 +31,14 @@
 - (void)setupUI {
 	// Setup title
 	self.pokemonNumberLabel.text = [NSString stringWithFormat:@"%ld", self.pokemonNumber];
-	
+	// Setup Background
+	self.view.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:241.0/255.0 blue:252/255.0 alpha:1.0];
 	// Setup initial Picker UI
 	[self.slotMachinePickerView selectRow:4 inComponent:0 animated:YES];
-
 	[self.slotMachinePickerView selectRow:4 inComponent:1 animated:YES];
-
 	[self.slotMachinePickerView selectRow:4 inComponent:2 animated:YES];
 }
+
 #pragma mark - IBActions
 - (IBAction)closeButtonTapped:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
@@ -67,9 +67,7 @@
 	NSString *thirdSymbol = [self slotSymbolForRow:thirdComponentRandomNumber];
 	
 	BOOL firstHit = [firstSymbol isEqualToString:secondSymbol];
-	
 	BOOL secondHit = [secondSymbol isEqualToString:thirdSymbol];
-	
 	BOOL thirdHit = [firstSymbol isEqualToString:thirdSymbol];
 	
 	BOOL successHit = firstHit &&
@@ -86,7 +84,6 @@
 				@strongify(self)
 				[self performSegueWithIdentifier:ELSegueIdentifierOpenSuccessSlotMachine sender:nil];
 			});
-			
 		} else {
 			NSString *message = @"You lost! Please try again.";
 			if (firstHit || secondHit || thirdHit) {
@@ -133,7 +130,13 @@
 
 #pragma mark - ELScreenDismissable
 - (void)screedDidDismissed {
-	[self closeButtonTapped:nil];
+	@weakify(self)
+	[self dismissViewControllerAnimated:YES completion:^{
+		@strongify(self)
+		if ([self.delegate respondsToSelector:@selector(screedDidDismissed)]) {
+			[self.delegate screedDidDismissed];
+		}
+	}];
 }
 
 #pragma mark - Navigation
@@ -141,6 +144,7 @@
 	if ([segue.identifier isEqualToString:ELSegueIdentifierOpenSuccessSlotMachine]) {
 		ELSuccessViewController *successViewController = segue.destinationViewController;
 		successViewController.pokemonIdentifier = self.pokemonNumber;
+		successViewController.unlocked = NO;
 		successViewController.delegate = self;
 	}
 }

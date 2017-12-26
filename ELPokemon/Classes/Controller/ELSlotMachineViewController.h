@@ -11,5 +11,5 @@
 
 @interface ELSlotMachineViewController : ELViewController<UIPickerViewDataSource, UIPickerViewDelegate, ELScreenDismissable>
 @property (nonatomic, assign) NSInteger pokemonNumber;
-
+@property (nonatomic, weak) id<ELScreenDismissable> delegate;
 @end

@@ -12,5 +12,5 @@
 @property (nonatomic, strong) IBOutlet UILabel *cellLabel;
 @property (nonatomic, strong) IBOutlet UIImageView *cellImageView;
 
-- (void)prepareForDisplayWithLabelText:(NSString *)labelText image:(NSString *)image;
+- (void)prepareForDisplayWithLabelText:(NSString *)labelText image:(NSString *)imageName;
 @end

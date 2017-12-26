@@ -29,35 +29,44 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.client = [[ELNetworkClient alloc] initWithBaseURL:[NSURL URLWithString:[ELEnvironment isDevelopmentEnvironment] ? ELNetworkClientBaseURL : ELNetworkClientBaseURLDevelopment]];
-
-	[SVProgressHUD show];
+	self.view.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:241.0/255.0 blue:252/255.0 alpha:1.0];
 	
-	@weakify(self)
-	[self.client GET:[NSString stringWithFormat:@"/api/v2/pokemon/%ld" , self.pokemonIdentifier] parameters:nil completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
-		@strongify(self)
-		[SVProgressHUD dismiss];
-		ELPokemon *pokemon = response.result;
-		ELPokemonRealm *pokemonRealm = [[ELPokemonRealm alloc] initWithModel:pokemon];
+	self.client = [[ELNetworkClient alloc] initWithBaseURL:[NSURL URLWithString:[ELEnvironment isDevelopmentEnvironment] ? ELNetworkClientBaseURL : ELNetworkClientBaseURLDevelopment]];
+	
+	if (self.unlocked) {
+		[self updateUI];
+	} else {
+		[SVProgressHUD show];
 		
-		self.pokemonImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", self.pokemonIdentifier]];
-		
-		self.pokemonNameLabel.text = pokemonRealm.name;
-		
-		self.pokemonWeightLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.weight];
-		
-		self.pokemonHeightLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.height];
-		
-		self.pokemonBaseExperienceLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.baseExperience];
-		
-		if (![ELPokemonRealm objectForPrimaryKey:pokemon.identifier]) {
-			RLMRealm *realm = [RLMRealm defaultRealm];
-			[realm beginWriteTransaction];
-			[realm addObject:pokemonRealm];
-			[realm commitWriteTransaction];
-		}
-		
-	}];
+		@weakify(self)
+		[self.client GET:[NSString stringWithFormat:@"/api/v2/pokemon/%ld" , self.pokemonIdentifier] parameters:nil completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+			@strongify(self)
+			[SVProgressHUD dismiss];
+			ELPokemon *pokemon = response.result;
+			ELPokemonRealm *pokemonRealm = [[ELPokemonRealm alloc] initWithModel:pokemon];
+			
+			if (![ELPokemonRealm objectForPrimaryKey:pokemon.identifier]) {
+				RLMRealm *realm = [RLMRealm defaultRealm];
+				[realm beginWriteTransaction];
+				[realm addObject:pokemonRealm];
+				[realm commitWriteTransaction];
+			}
+			
+			[self updateUI];
+		}];
+	}
+}
+
+#pragma mark - Setup UI
+- (void)updateUI {
+	self.pokemonImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", self.pokemonIdentifier]];
+	
+	ELPokemonRealm *pokemonRealm = [ELPokemonRealm objectForPrimaryKey:[NSNumber numberWithInteger:self.pokemonIdentifier]];
+	
+	self.pokemonNameLabel.text = pokemonRealm.name;
+	self.pokemonWeightLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.weight];
+	self.pokemonHeightLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.height];
+	self.pokemonBaseExperienceLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.baseExperience];
 }
 
 #pragma mark - IBAction
