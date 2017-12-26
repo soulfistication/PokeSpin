@@ -24,7 +24,6 @@
 		52098C681FF16C1300009461 /* ELSlotMachineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C671FF16C1300009461 /* ELSlotMachineViewController.m */; };
 		52098C6B1FF16EFE00009461 /* ELCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C6A1FF16EFE00009461 /* ELCollectionViewCell.m */; };
 		52098C6E1FF25B0B00009461 /* ELSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */; };
-		52098C711FF25B1900009461 /* ELFailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52098C701FF25B1900009461 /* ELFailedViewController.m */; };
 		916E2975458AA1C1B5C9C24B /* libPods-ELPokemon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DDB8D719E964AA324C07F5 /* libPods-ELPokemon.a */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +61,6 @@
 		52098C6A1FF16EFE00009461 /* ELCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELCollectionViewCell.m; sourceTree = "<group>"; };
 		52098C6C1FF25B0B00009461 /* ELSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELSuccessViewController.h; sourceTree = "<group>"; };
 		52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELSuccessViewController.m; sourceTree = "<group>"; };
-		52098C6F1FF25B1900009461 /* ELFailedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELFailedViewController.h; sourceTree = "<group>"; };
-		52098C701FF25B1900009461 /* ELFailedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELFailedViewController.m; sourceTree = "<group>"; };
 		52098C721FF2875200009461 /* ELScreenDismissable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELScreenDismissable.h; sourceTree = "<group>"; };
 		6FD7151AD979F6963EAD289D /* Pods-ELPokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.debug.xcconfig"; sourceTree = "<group>"; };
 		7FF875C9158F8E97274BE995 /* Pods-ELPokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELPokemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,8 +145,6 @@
 				52098C671FF16C1300009461 /* ELSlotMachineViewController.m */,
 				52098C6C1FF25B0B00009461 /* ELSuccessViewController.h */,
 				52098C6D1FF25B0B00009461 /* ELSuccessViewController.m */,
-				52098C6F1FF25B1900009461 /* ELFailedViewController.h */,
-				52098C701FF25B1900009461 /* ELFailedViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -395,7 +390,6 @@
 				52098C681FF16C1300009461 /* ELSlotMachineViewController.m in Sources */,
 				52098C4E1FF0EB2B00009461 /* ELNetworkClient.m in Sources */,
 				52098C281FF0EADE00009461 /* AppDelegate.m in Sources */,
-				52098C711FF25B1900009461 /* ELFailedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

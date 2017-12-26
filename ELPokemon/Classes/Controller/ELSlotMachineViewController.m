@@ -7,13 +7,15 @@
 //
 
 #import <libextobjc/extobjc.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "ELSlotMachineViewController.h"
 #import "ELSuccessViewController.h"
-#import "ELFailedViewController.h"
 
 @interface ELSlotMachineViewController ()
-@property (nonatomic, strong) NSString *slotSequence;
+@property (weak, nonatomic) IBOutlet UILabel *pokemonNumberLabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *slotMachinePickerView;
+@property (weak, nonatomic) IBOutlet UILabel *wonLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *wonImageView;
 @property (weak, nonatomic) IBOutlet UIButton *spinSlotButton;
 @end
 
@@ -22,13 +24,21 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	[self.slotMachinePickerView selectRow:4 inComponent:0 animated:YES];
-	
-	[self.slotMachinePickerView selectRow:4 inComponent:1 animated:YES];
-	
-	[self.slotMachinePickerView selectRow:4 inComponent:2 animated:YES];
+	[self setupUI];
 }
 
+#pragma mark - Setup UI
+- (void)setupUI {
+	// Setup title
+	self.pokemonNumberLabel.text = [NSString stringWithFormat:@"%ld", self.pokemonNumber];
+	
+	// Setup initial Picker UI
+	[self.slotMachinePickerView selectRow:4 inComponent:0 animated:YES];
+
+	[self.slotMachinePickerView selectRow:4 inComponent:1 animated:YES];
+
+	[self.slotMachinePickerView selectRow:4 inComponent:2 animated:YES];
+}
 #pragma mark - IBActions
 - (IBAction)closeButtonTapped:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
@@ -36,7 +46,12 @@
 
 - (IBAction)spinSlotMachine:(id)sender {
 	self.spinSlotButton.enabled = NO;
-
+	// Modulo 12 because we have 4 symbols * 3 times to show one full screen of
+	// Picker View content. In the end one screen was not enough to make the spin
+	// effect look continuous so I multiplied 12 * 3 = 36 to get 3 screens worth
+	// of spin and make it seem infinite.
+	// The + 12 is because we don't want to fall back to the first screen. It looks
+	// awkard from the top. You can remove it and experiment.
 	NSInteger firstComponentRandomNumber = arc4random() % 12 + 12;
 	NSInteger secondComponentRandomNumber = arc4random() % 12 + 12;
 	NSInteger thirdComponentRandomNumber = arc4random() % 12 + 12;
@@ -51,30 +66,50 @@
 	NSString *secondSymbol = [self slotSymbolForRow:secondComponentRandomNumber];
 	NSString *thirdSymbol = [self slotSymbolForRow:thirdComponentRandomNumber];
 	
-	self.slotSequence = [[firstSymbol stringByAppendingString:secondSymbol] stringByAppendingString:thirdSymbol];
+	BOOL firstHit = [firstSymbol isEqualToString:secondSymbol];
 	
-	BOOL successHit = [firstSymbol isEqualToString:secondSymbol] &&
-	[secondSymbol isEqualToString:thirdSymbol];
+	BOOL secondHit = [secondSymbol isEqualToString:thirdSymbol];
+	
+	BOOL thirdHit = [firstSymbol isEqualToString:thirdSymbol];
+	
+	BOOL successHit = firstHit &&
+	secondHit;
 	
 	@weakify(self)
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 		@strongify(self)
 		if (successHit) {
-			[self performSegueWithIdentifier:ELSegueIdentifierOpenSuccessSlotMachine sender:nil];
+			self.wonLabel.hidden = NO;
+			self.wonImageView.hidden = NO;
+			@weakify(self)
+			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+				@strongify(self)
+				[self performSegueWithIdentifier:ELSegueIdentifierOpenSuccessSlotMachine sender:nil];
+			});
+			
 		} else {
-			[self performSegueWithIdentifier:ELSegueIdentifierOpenFailedSlodMachine sender:nil];
+			NSString *message = @"You lost! Please try again.";
+			if (firstHit || secondHit || thirdHit) {
+				message = @"You almost won! Please try again";
+			}
+			[SVProgressHUD showInfoWithStatus:message];
+			@weakify(self)
+			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+				@strongify(self)
+				[SVProgressHUD dismiss];
+				[self dismissViewControllerAnimated:YES completion:nil];
+			});
 		}
 	});
-
 }
 
 #pragma mark - UIPickerView Data Source
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-	return 3;
+	return 3; // 3 column slot machine add more to make it harder!
 }
 
 - (NSInteger)pickerView:(nonnull UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-	return 36;
+	return 36; // 3 screens of 12 = 4 * 3 characters. Enough to make it look infinitely spinning.
 }
 
 #pragma mark - UIPickerView Delegate
@@ -84,7 +119,7 @@
 
 #pragma mark - Helpers
 - (NSString *)slotSymbolForRow:(NSInteger)row {
-	if (row % 4 == 0) {
+	if (row % 4 == 0) { // We have 4 different symbols hence modulo 4.
 		return @"♠️";
 	} else if (row % 4 == 1) {
 		return @"♥️";
@@ -105,12 +140,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	if ([segue.identifier isEqualToString:ELSegueIdentifierOpenSuccessSlotMachine]) {
 		ELSuccessViewController *successViewController = segue.destinationViewController;
-		successViewController.successfullSequence = self.slotSequence;
+		successViewController.pokemonIdentifier = self.pokemonNumber;
 		successViewController.delegate = self;
-	} else if ([segue.identifier isEqualToString:ELSegueIdentifierOpenFailedSlodMachine]) {
-		ELFailedViewController *failedViewController = segue.destinationViewController;
-		failedViewController.failedSequence = self.slotSequence;
-		failedViewController.delegate = self;
 	}
 }
 @end

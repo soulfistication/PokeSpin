@@ -19,6 +19,7 @@
 		self.name = pokemon.name;
 		self.weight = pokemon.weight.integerValue;
 		self.height = pokemon.height.integerValue;
+		self.baseExperience = pokemon.baseExperience.integerValue;
 	}
 	
 	return self;

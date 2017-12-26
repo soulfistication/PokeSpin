@@ -15,6 +15,7 @@
 @property NSString *name;
 @property NSInteger weight;
 @property NSInteger height;
+@property NSInteger baseExperience;
 
 - (instancetype)initWithModel:(ELPokemon *)pokemon;
 @end

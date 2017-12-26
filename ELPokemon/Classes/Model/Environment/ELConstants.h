@@ -14,7 +14,7 @@
 static NSString * const ELSegueIdentifierOpenPokeDex = @"ELSegueIdentifierOpenPokeDex";
 static NSString * const ELSegueIdentifierOpenSlotMachine = @"ELSegueIdentifierOpenSlotMachine";
 static NSString * const ELSegueIdentifierOpenSuccessSlotMachine = @"ELSegueIdentifierOpenSuccessSlotMachine";
-static NSString * const ELSegueIdentifierOpenFailedSlodMachine = @"ELSegueIdentifierOpenSuccessSlotMachine";
+static NSString * const ELSegueIdentifierOpenAlreadyWonPokemon = @"ELSegueIdentifierOpenAlreadyWonPokemon";
 
 /* Cell Identifiers */
 

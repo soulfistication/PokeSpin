@@ -6,8 +6,10 @@
 //  Copyright © 2017 Ivan. All rights reserved.
 //
 
+#import <Realm/Realm.h>
 #import "ELCollectionViewController.h"
 #import "ELCollectionViewCell.h"
+#import "ELSlotMachineViewController.h"
 
 @interface ELCollectionViewController ()
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
@@ -25,12 +27,6 @@
 #pragma mark - SetupUI
 - (void)setupUI {
 	self.title = @"My Pokemon Collection";
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(triggerSlotSegue:)];
-}
-
-#pragma mark - Target / Action
-- (void)triggerSlotSegue:(id)sender {
-	[self performSegueWithIdentifier:ELSegueIdentifierOpenSlotMachine sender:sender];
 }
 
 #pragma mark - UICollectionView Data Source
@@ -41,14 +37,14 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 	ELCollectionViewCell *cell = (ELCollectionViewCell *)[self.collectionView dequeueReusableCellWithReuseIdentifier:ELCellIdentifierPokemonCollectionViewCell forIndexPath:indexPath];
 	
-	[cell prepareForDisplayWithLabelText:[NSString stringWithFormat:@"%ld", indexPath.row] image:@"pokemonImage"];
+	[cell prepareForDisplayWithLabelText:[NSString stringWithFormat:@"%ld", indexPath.row + 1] image:@"pokemonImage"];
 	
 	return cell;
 }
 
 #pragma mark - UICollectionvView Delegate Flow Layout
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"%ld", indexPath.row);
+	[self performSegueWithIdentifier:ELSegueIdentifierOpenSlotMachine sender:indexPath];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,7 +55,9 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	if ([segue.identifier isEqualToString:ELSegueIdentifierOpenSlotMachine]) {
-		
+		ELSlotMachineViewController *slotMachineViewController = segue.destinationViewController;
+		NSIndexPath *indexPath = (NSIndexPath *)sender;
+		slotMachineViewController.pokemonNumber = indexPath.row + 1;
 	}
 }
 @end

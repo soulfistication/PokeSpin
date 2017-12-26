@@ -6,6 +6,7 @@
 //  Copyright © 2017 Ivan. All rights reserved.
 //
 
+#import <libextobjc/extobjc.h>
 #import <Realm/Realm.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ELSuccessViewController.h"
@@ -16,6 +17,11 @@
 
 @interface ELSuccessViewController ()
 @property (nonatomic, strong) ELNetworkClient *client;
+@property (weak, nonatomic) IBOutlet UIImageView *pokemonImageView;
+@property (weak, nonatomic) IBOutlet UILabel *pokemonNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pokemonWeightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pokemonHeightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pokemonBaseExperienceLabel;
 @end
 
 @implementation ELSuccessViewController
@@ -24,13 +30,25 @@
 	[super viewDidLoad];
 	
 	self.client = [[ELNetworkClient alloc] initWithBaseURL:[NSURL URLWithString:[ELEnvironment isDevelopmentEnvironment] ? ELNetworkClientBaseURL : ELNetworkClientBaseURLDevelopment]];
-	
 
 	[SVProgressHUD show];
-	[self.client GET:@"/api/v2/pokemon/2" parameters:nil completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+	
+	@weakify(self)
+	[self.client GET:[NSString stringWithFormat:@"/api/v2/pokemon/%ld" , self.pokemonIdentifier] parameters:nil completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+		@strongify(self)
 		[SVProgressHUD dismiss];
 		ELPokemon *pokemon = response.result;
 		ELPokemonRealm *pokemonRealm = [[ELPokemonRealm alloc] initWithModel:pokemon];
+		
+		self.pokemonImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", self.pokemonIdentifier]];
+		
+		self.pokemonNameLabel.text = pokemonRealm.name;
+		
+		self.pokemonWeightLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.weight];
+		
+		self.pokemonHeightLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.height];
+		
+		self.pokemonBaseExperienceLabel.text = [NSString stringWithFormat:@"%ld", pokemonRealm.baseExperience];
 		
 		if (![ELPokemonRealm objectForPrimaryKey:pokemon.identifier]) {
 			RLMRealm *realm = [RLMRealm defaultRealm];

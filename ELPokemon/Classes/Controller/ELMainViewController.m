@@ -23,6 +23,9 @@
 	[self performSegueWithIdentifier:ELSegueIdentifierOpenPokeDex sender:self];
 }
 
+- (IBAction)resetProgressTapped:(id)sender {
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	if ([segue.identifier isEqualToString:ELSegueIdentifierOpenPokeDex]) {
