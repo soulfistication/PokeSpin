@@ -259,7 +259,6 @@
 				52098C1F1FF0EADE00009461 /* Sources */,
 				52098C201FF0EADE00009461 /* Frameworks */,
 				52098C211FF0EADE00009461 /* Resources */,
-				12DFEE94DF66DEBAB57CFF2D /* [CP] Embed Pods Frameworks */,
 				017B1AA98D004444EE6EA170 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -326,31 +325,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		12DFEE94DF66DEBAB57CFF2D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ELPokemon/Pods-ELPokemon-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1645B22A781D0B07A6E66E7 /* [CP] Check Pods Manifest.lock */ = {
