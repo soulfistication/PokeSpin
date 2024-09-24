@@ -42,18 +42,26 @@
 }
 
 - (IBAction)resetProgressTapped:(id)sender {
-	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Confirm reset progress" message:@"Are you sure you want to erase your precious Pokemon?" preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Confirm reset progress"
+                                                                             message:@"Are you sure you want to erase your precious Pokemon?"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
 	
-	[alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+	[alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:^(UIAlertAction * _Nonnull action) {
 	}]];
 	
 	@weakify(self)
-	[alertController addAction:[UIAlertAction actionWithTitle:@"Reset Progress" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+	[alertController addAction:[UIAlertAction actionWithTitle:@"Reset Progress"
+                                                        style:UIAlertActionStyleDestructive
+                                                      handler:^(UIAlertAction * _Nonnull action) {
 		@strongify(self)
 		[self resetProgress];
 	}]];
 	
-	[self presentViewController:alertController animated:YES completion:nil];
+	[self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 #pragma mark - Helpers
