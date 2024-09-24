@@ -29,7 +29,10 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:241.0/255.0 blue:252/255.0 alpha:1.0];
+	self.view.backgroundColor = [UIColor colorWithRed:222.0/255.0
+                                                green:241.0/255.0
+                                                 blue:252/255.0
+                                                alpha:1.0];
 	
 	self.client = [[ELNetworkClient alloc] initWithBaseURL:[NSURL URLWithString:[ELEnvironment isDevelopmentEnvironment] ? ELNetworkClientBaseURL : ELNetworkClientBaseURLDevelopment]];
 	
@@ -39,7 +42,9 @@
 		[SVProgressHUD show];
 		
 		@weakify(self)
-		[self.client GET:[NSString stringWithFormat:@"/api/v2/pokemon/%ld" , self.pokemonIdentifier] parameters:nil completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+		[self.client GET:[NSString stringWithFormat:@"/api/v2/pokemon/%ld" , self.pokemonIdentifier]
+              parameters:nil
+              completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
 			@strongify(self)
 			[SVProgressHUD dismiss];
 			ELPokemon *pokemon = response.result;

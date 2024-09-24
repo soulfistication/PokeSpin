@@ -25,9 +25,15 @@
 
 #pragma mark - Setup UI
 - (void)setupUI {
-	self.infoTextView.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:241.0/255.0 blue:252/255.0 alpha:1.0];
+	self.infoTextView.backgroundColor = [UIColor colorWithRed:222.0/255.0
+                                                        green:241.0/255.0
+                                                         blue:252/255.0
+                                                        alpha:1.0];
 	
-	self.view.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:241.0/255.0 blue:252/255.0 alpha:1.0];
+	self.view.backgroundColor = [UIColor colorWithRed:222.0/255.0
+                                                green:241.0/255.0
+                                                 blue:252/255.0
+                                                alpha:1.0];
 }
 
 #pragma mark - IBActions

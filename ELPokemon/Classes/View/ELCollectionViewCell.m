@@ -27,7 +27,10 @@
 
 #pragma mark - Setup UI
 - (void)setupUI {
-	self.contentView.backgroundColor = [UIColor colorWithRed:222.0/255.0 green:241.0/255.0 blue:252/255.0 alpha:1.0];
+	self.contentView.backgroundColor = [UIColor colorWithRed:222.0/255.0
+                                                       green:241.0/255.0
+                                                        blue:252/255.0
+                                                       alpha:1.0];
 	self.contentView.layer.cornerRadius = 5.0;
 }
 @end
