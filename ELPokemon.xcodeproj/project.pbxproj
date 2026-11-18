@@ -512,6 +512,7 @@
 				DEVELOPMENT_TEAM = 6F69A38VNJ;
 				GCC_PREFIX_HEADER = ELPokemon/Classes/Model/Environment/PrefixHeader.pch;
 				INFOPLIST_FILE = ELPokemon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ivan.ELPokemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,6 +529,7 @@
 				DEVELOPMENT_TEAM = 6F69A38VNJ;
 				GCC_PREFIX_HEADER = ELPokemon/Classes/Model/Environment/PrefixHeader.pch;
 				INFOPLIST_FILE = ELPokemon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ivan.ELPokemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
